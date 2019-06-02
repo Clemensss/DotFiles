@@ -1,10 +1,8 @@
 # DotFiles
 My config files and stuff
 
-#Includes : 
+## Includes : 
 
-i3 config file
-
-.vimrc
-
-i3status
+-i3 config file
+-.vimrc
+-i3status
