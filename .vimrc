@@ -22,21 +22,16 @@ set undolevels=1000
 set backspace=indent,eol,start	
 
 syntax on
+filetype on
 
-"Auto c file gen
+"Auto c and cpp file generate
+"deletes a line that gets created cause of buffer
 
-autocmd FileType c call IoStream()
-fu! IoStream()
-    if line("$") == 1
-        call append(0, "#include <stdio.h>")
-        call append(1, "")
-        call append(2, "int main()")
-        call append(3, "{")
-        call append(4, "")
-        call append(5, "    return 0;")
-        call append(6, "}")
-    endif
-endfu
+au BufNewFile *.c r ~/vimthings/template.c 
+au BufNewFile *.c 1delete 
+au BufNewFile *.cpp r ~/vimthings/template.cpp
+au BufNewFile *.cpp 1delete 
+
 
 "Tab mapping
 nnoremap <f8> :tabnext<CR>
