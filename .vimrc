@@ -5,8 +5,9 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-set number      
+set number
 set showmatch	
+filetype plugin indent on
 
 set hlsearch	
 set smartcase	
@@ -15,6 +16,7 @@ set incsearch
 
 set shiftwidth=4
 set softtabstop=4	
+
 
 set ruler	
 
@@ -32,13 +34,10 @@ au BufNewFile *.c 1delete
 au BufNewFile *.cpp r ~/vimthings/template.cpp
 au BufNewFile *.cpp 1delete 
 
-set runtimepath+=~/.vim/bundle/vim-autocomplpop
-set runtimepath+=~/.vim/bundle/echodoc.vim
+execute pathogen#infect()
+nmap <F2> :TagbarOpenAutoClose<CR>
 
 " To use echodoc, you must increase 'cmdheight' value.
-set cmdheight=2
-let g:echodoc_enable_at_startup = 1
-let g:EchoDocEnable = 1
 
 "Tab mapping
 nnoremap <f8> :tabnext<CR>
