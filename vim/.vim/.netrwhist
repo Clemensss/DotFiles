@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/run'
+let g:netrw_dirhist_4='/home/clemens/.vim'
+let g:netrw_dirhist_3='/home/clemens/bot/.git'
+let g:netrw_dirhist_2='/home/clemens/.ssh'
+let g:netrw_dirhist_1='/home/clemens/.config/i3'
